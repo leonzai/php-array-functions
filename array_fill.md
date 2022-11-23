@@ -19,12 +19,24 @@ Array
     [9] => banana
     [10] => banana
 )
+
+Output of the above example in PHP 7:
+
 Array
 (
     [-2] => pear
     [0] => pear
     [1] => pear
     [2] => pear
+)
+Output of the above example in PHP 8:
+
+Array
+(
+    [-2] => pear
+    [-1] => pear
+    [0] => pear
+    [1] => pear
 )
 */
 ```
