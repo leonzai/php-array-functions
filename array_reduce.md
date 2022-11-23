@@ -9,25 +9,25 @@ array_reduce ( array $array , callable $callback [, mixed $initial = NULL ] ) : 
 ```php
 <?php
 $a = [
-    [&#039;id&#039; => 1, &#039;name&#039; => &#039;leon&#039;,],
-    [&#039;id&#039; => 2, &#039;name&#039; => &#039;千金&#039;,],
-    [&#039;id&#039; => 3, &#039;name&#039; => &#039;一刻&#039;,],
+    ['id' => 1, 'name' => 'leon',],
+    ['id' => 2, 'name' => '千金',],
+    ['id' => 3, 'name' => '一刻',],
 ];
 
 var_dump("请输出 leon,千金,一刻");
 
 // foreach 方式
-$res = &#039;&#039;;
+$res = '';
 foreach ($a as $arr) {
-    $res .= &#039;,&#039; . $arr[&#039;name&#039;];
+    $res .= ',' . $arr['name'];
 }
 
-var_dump(trim($res, &#039;,&#039;));
+var_dump(trim($res, ','));
 
 // array_reduce 方式
 $string = array_reduce($a, function ($v1, $v2) {
-    return $v1 . &#039;,&#039; . $v2[&#039;name&#039;];
+    return $v1 . ',' . $v2['name'];
 });
 
-var_dump(trim($string, &#039;,&#039;));
+var_dump(trim($string, ','));
 ```

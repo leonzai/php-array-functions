@@ -10,10 +10,10 @@ array_column ( array $input , mixed $column_key [, mixed $index_key = NULL ] ) :
 <?php
 
 $arr = [
-    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
-    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
+    ['id' => 11, 'name' => 'a',],
+    ['id' => 12, 'name' => 'a',],
 ];
-$result = array_column($arr, &#039;name&#039;);
+$result = array_column($arr, 'name');
 var_dump($result);
 
 /*
@@ -26,10 +26,10 @@ array(2) {
 */
 
 $arr = [
-    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
-    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
+    ['id' => 11, 'name' => 'a',],
+    ['id' => 12, 'name' => 'a',],
 ];
-$result = array_column($arr, &#039;name&#039;, &#039;id&#039;);
+$result = array_column($arr, 'name', 'id');
 var_dump($result);
 
 /*
@@ -42,10 +42,10 @@ array(2) {
 */
 
 $arr = [
-    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
-    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
+    ['id' => 11, 'name' => 'a',],
+    ['id' => 12, 'name' => 'a',],
 ];
-$result = array_column($arr, null, &#039;id&#039;);
+$result = array_column($arr, null, 'id');
 var_dump($result);
 
 /*
@@ -78,11 +78,11 @@ class User
 }
 
 $users = [
-    new User(&#039;user 1&#039;),
-    new User(&#039;user 2&#039;),
+    new User('user 1'),
+    new User('user 2'),
 ];
 
-$result = array_column($users, &#039;username&#039;);
+$result = array_column($users, 'username');
 var_dump($result);
 
 /*

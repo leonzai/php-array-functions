@@ -8,22 +8,22 @@ in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : bool
 
 ```php
 <?php
-$a = [[&#039;p&#039;, &#039;h&#039;], [&#039;p&#039;, &#039;r&#039;], &#039;o&#039;];
+$a = [['p', 'h'], ['p', 'r'], 'o'];
 
-if (in_array([&#039;p&#039;, &#039;h&#039;], $a)) {
-    echo "&#039;ph&#039; was found\n";
+if (in_array(['p', 'h'], $a)) {
+    echo "'ph' was found\n";
 }
 
-if (in_array([&#039;f&#039;, &#039;i&#039;], $a)) {
-    echo "&#039;fi&#039; was found\n";
+if (in_array(['f', 'i'], $a)) {
+    echo "'fi' was found\n";
 }
 
-if (in_array(&#039;o&#039;, $a)) {
-    echo "&#039;o&#039; was found\n";
+if (in_array('o', $a)) {
+    echo "'o' was found\n";
 }
 
 /*
-&#039;ph&#039; was found
-&#039;o&#039; was found
+'ph' was found
+'o' was found
 */
 ```

@@ -9,12 +9,12 @@ array_filter ( array $array [, callable $callback [, int $flag = 0 ]] ) : array
 <?php
 
 $entry = [
-    0 => &#039;foo&#039;,
+    0 => 'foo',
     1 => false,
     2 => -1,
     3 => null,
-    4 => &#039;&#039;,
-    5 => &#039;0&#039;,
+    4 => '',
+    5 => '0',
     6 => 0,
 ];
 
@@ -32,14 +32,14 @@ Array
 ```php
 <?php
 
-$arr = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3, &#039;d&#039; => 4];
+$arr = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4];
 
 var_dump(array_filter($arr, function ($k) {
-    return $k == &#039;b&#039;;
+    return $k == 'b';
 }, ARRAY_FILTER_USE_KEY));
 
 var_dump(array_filter($arr, function ($v, $k) {
-    return $k == &#039;b&#039; || $v == 4;
+    return $k == 'b' || $v == 4;
 }, ARRAY_FILTER_USE_BOTH));
 
 /*
@@ -68,7 +68,7 @@ function even($var)
     return !($var & 1);
 }
 
-$array1 = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3, &#039;d&#039; => 4, &#039;e&#039; => 5];
+$array1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
 $array2 = [6, 7, 8, 9, 10, 11, 12];
 
 print_r(array_filter($array1, "odd"));

@@ -11,9 +11,9 @@ array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ] ) : 
 ```php
 <?php
 $arr = [
-    "name1" => &#039;栗深.com&#039;,
-    "name2" => &#039;lishengroup.com&#039;,
-    "name3" => &#039;qianjinyike.com&#039;,
+    "name1" => '栗深.com',
+    "name2" => 'lishengroup.com',
+    "name3" => 'qianjinyike.com',
 ];
 
 /** foreach 方式 */
@@ -32,8 +32,8 @@ array_walk($arr, function ($value, $key) {
 ```php
 <?php
 $arr = [
-    "name2" => [&#039;lishengroup.com&#039;, &#039;栗深&#039;],
-    "name3" => &#039;qianjinyike.com&#039;,
+    "name2" => ['lishengroup.com', '栗深'],
+    "name3" => 'qianjinyike.com',
 ];
 
 array_walk($arr, function ($value) {

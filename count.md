@@ -6,8 +6,8 @@ count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ] ) : int
 
 ```php
 <?php
-$food = array(&#039;fruits&#039; => array(&#039;orange&#039;, &#039;banana&#039;, &#039;apple&#039;),
-    &#039;veggie&#039; => array(&#039;carrot&#039;, &#039;collard&#039;, &#039;pea&#039;));
+$food = array('fruits' => array('orange', 'banana', 'apple'),
+    'veggie' => array('carrot', 'collard', 'pea'));
 
 echo count($food, COUNT_RECURSIVE); // output 8
 

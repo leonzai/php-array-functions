@@ -12,22 +12,22 @@ array_map ( callable $callback , array $array1 [, array $... ] ) : array
 ```php
 <?php
 $a = [
-    [&#039;id&#039; => 1, &#039;name&#039; => &#039;千金&#039;],
-    [&#039;id&#039; => 2, &#039;name&#039; => null],
-    [&#039;id&#039; => 3, &#039;name&#039; => &#039;一刻&#039;],
+    ['id' => 1, 'name' => '千金'],
+    ['id' => 2, 'name' => null],
+    ['id' => 3, 'name' => '一刻'],
 ];
 
 $res1 = [];
 foreach ($a as $arr) {
-    if (!$arr[&#039;name&#039;]) {
-        $arr[&#039;name&#039;] = &#039;匿名&#039;;
+    if (!$arr['name']) {
+        $arr['name'] = '匿名';
     }
     $res1[] = $arr;
 }
 
 $res2 = array_map(function ($value) {
-    if (!$value[&#039;name&#039;]) {
-        $value[&#039;name&#039;] = &#039;匿名&#039;;
+    if (!$value['name']) {
+        $value['name'] = '匿名';
     }
     return $value;
 }, $a);
@@ -41,7 +41,7 @@ bool(true)
 
 ```php
 <?php
-$arr = [&#039;stringkey&#039; => &#039;value&#039;];
+$arr = ['stringkey' => 'value'];
 var_dump(array_map(null,  $arr));
 
 /*
@@ -52,8 +52,8 @@ array(1) {
 */
 
 $a = [1, 2, 3,];
-$b = [&#039;one&#039;, &#039;two&#039;, &#039;three&#039;, ];
-$c = [&#039;uno&#039;, &#039;dos&#039;, ];
+$b = ['one', 'two', 'three', ];
+$c = ['uno', 'dos', ];
 
 $d = array_map(null, $a, $b, $c);
 print_r($d);
@@ -91,7 +91,7 @@ function triple($n)
 }
 
 $a = [1, 2, 3, "xx" => 4, 5];
-$b = array_map(&#039;triple&#039;, $a);
+$b = array_map('triple', $a);
 print_r($b);
 
 /*
@@ -116,12 +116,12 @@ function b($n, $m)
 }
 
 $a = [1, "test" => 2,];
-$b = [&#039;aa&#039;, &#039;bb&#039;,];
+$b = ['aa', 'bb',];
 
-$c = array_map(&#039;a&#039;, $a, $b);
+$c = array_map('a', $a, $b);
 print_r($c);
 
-$d = array_map(&#039;b&#039;, $a, $b);
+$d = array_map('b', $a, $b);
 print_r($d);
 
 /*
@@ -146,6 +146,6 @@ Array
 */
 
 // 应用
-$integers = array_map (&#039;intval&#039;, $integers);
-$safeStrings = array_map (&#039;mysql_real_escape_string&#039;, $unsafeStrings);
+$integers = array_map ('intval', $integers);
+$safeStrings = array_map ('mysql_real_escape_string', $unsafeStrings);
 ```

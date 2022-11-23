@@ -7,7 +7,7 @@ list ( mixed $var1 [, mixed $... ] ) : array
 
 ```php
 <?php
-$info = [&#039;coffee&#039;, &#039;brown&#039;, &#039;caffeine&#039;];
+$info = ['coffee', 'brown', 'caffeine'];
 
 list($drink, $color, $power) = $info;
 echo "$drink  $color  $power \n";
@@ -45,7 +45,7 @@ int(3)
 ```php
 <?php
 
-$info = array(&#039;coffee&#039;, &#039;brown&#039;, &#039;caffeine&#039;);
+$info = array('coffee', 'brown', 'caffeine');
 
 list($a[0], $a[1], $a[2]) = $info;
 
@@ -78,8 +78,8 @@ array(3) {
 
 ```php
 <?php
-$foo = array(2 => &#039;a&#039;, &#039;foo&#039; => &#039;b&#039;, 0 => &#039;c&#039;);
-$foo[1] = &#039;d&#039;;
+$foo = array(2 => 'a', 'foo' => 'b', 0 => 'c');
+$foo[1] = 'd';
 list($x, $y, $z) = $foo;
 var_dump($x, $y, $z);
 
@@ -95,8 +95,8 @@ string(1) "a"
 ```php
 <?php
 $data = [
-    ["id" => 1, "name" => &#039;Tom&#039;],
-    ["id" => 2, "name" => &#039;Fred&#039;],
+    ["id" => 1, "name" => 'Tom'],
+    ["id" => 2, "name" => 'Fred'],
 ];
 foreach ($data as ["id" => $id, "name" => $name]) {
     echo "id: $id, name: $name\n";

@@ -88,15 +88,15 @@ array(2) {
 
 ```php
 <?php
-$data[] = array(&#039;volume&#039; => 67, &#039;edition&#039; => 2);
-$data[] = array(&#039;volume&#039; => 86, &#039;edition&#039; => 1);
-$data[] = array(&#039;volume&#039; => 85, &#039;edition&#039; => 6);
-$data[] = array(&#039;volume&#039; => 98, &#039;edition&#039; => 2);
-$data[] = array(&#039;volume&#039; => 86, &#039;edition&#039; => 6);
-$data[] = array(&#039;volume&#039; => 67, &#039;edition&#039; => 7);
+$data[] = array('volume' => 67, 'edition' => 2);
+$data[] = array('volume' => 86, 'edition' => 1);
+$data[] = array('volume' => 85, 'edition' => 6);
+$data[] = array('volume' => 98, 'edition' => 2);
+$data[] = array('volume' => 86, 'edition' => 6);
+$data[] = array('volume' => 67, 'edition' => 7);
 
-$volume  = array_column($data, &#039;volume&#039;);
-$edition = array_column($data, &#039;edition&#039;);
+$volume  = array_column($data, 'volume');
+$edition = array_column($data, 'edition');
 
 array_multisort($volume, SORT_DESC, $edition, SORT_ASC, $data);
 
@@ -147,15 +147,15 @@ Array
 
 ```php
 <?php
-$data[] = [&#039;volume&#039; => 67, &#039;edition&#039; => 2];
-$data[] = [&#039;volume&#039; => 86, &#039;edition&#039; => 7];
-$data[] = [&#039;volume&#039; => 85, &#039;edition&#039; => 6];
-$data[] = [&#039;volume&#039; => 98, &#039;edition&#039; => 2];
-$data[] = [&#039;volume&#039; => 86, &#039;edition&#039; => 6];
-$data[] = [&#039;volume&#039; => 67, &#039;edition&#039; => 7];
+$data[] = ['volume' => 67, 'edition' => 2];
+$data[] = ['volume' => 86, 'edition' => 7];
+$data[] = ['volume' => 85, 'edition' => 6];
+$data[] = ['volume' => 98, 'edition' => 2];
+$data[] = ['volume' => 86, 'edition' => 6];
+$data[] = ['volume' => 67, 'edition' => 7];
 
-$volume = array_column($data, &#039;volume&#039;);
-$edition = array_column($data, &#039;edition&#039;);
+$volume = array_column($data, 'volume');
+$edition = array_column($data, 'edition');
 
 array_multisort($volume, SORT_DESC, $edition, SORT_ASC, $data);
 
@@ -206,8 +206,8 @@ Array
 
 ```php
 <?php
-$array1 = $array2 = [&#039;Alpha&#039;, &#039;atomic&#039;, &#039;Beta&#039;, &#039;bank&#039;];
-$array_lowercase = array_map(&#039;strtolower&#039;, $array1);
+$array1 = $array2 = ['Alpha', 'atomic', 'Beta', 'bank'];
+$array_lowercase = array_map('strtolower', $array1);
 
 array_multisort($array_lowercase, SORT_ASC, SORT_STRING, $array1);
 

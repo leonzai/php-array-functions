@@ -6,7 +6,7 @@ natcasesort ( array &$array ) : bool
 
 ```php
 <?php
-$array1 = $array2 = [&#039;IMG0.png&#039;, &#039;img12.png&#039;, &#039;img10.png&#039;, &#039;img2.png&#039;, &#039;img1.png&#039;, &#039;IMG3.png&#039;];
+$array1 = $array2 = ['IMG0.png', 'img12.png', 'img10.png', 'img2.png', 'img1.png', 'IMG3.png'];
 
 natcasesort($array2);
 print_r($array2);

@@ -7,15 +7,15 @@ key ( array $array ) : mixed
 ```php
 <?php
 $array = [
-    &#039;fruit1&#039; => &#039;apple&#039;,
-    &#039;fruit2&#039; => &#039;orange&#039;,
-    &#039;fruit3&#039; => &#039;grape&#039;,
-    &#039;fruit4&#039; => &#039;apple&#039;,
-    &#039;fruit5&#039; => &#039;apple&#039;
+    'fruit1' => 'apple',
+    'fruit2' => 'orange',
+    'fruit3' => 'grape',
+    'fruit4' => 'apple',
+    'fruit5' => 'apple'
 ];
 
 while ($fruit_name = current($array)) {
-    if ($fruit_name == &#039;apple&#039;) {
+    if ($fruit_name == 'apple') {
         echo key($array) . "\n";
     }
     next($array);

@@ -7,7 +7,7 @@ reset ( array &$array ) : mixed
 ```php
 <?php
 
-$array = array(&#039;step one&#039;, &#039;step two&#039;, &#039;step three&#039;, &#039;step four&#039;);
+$array = array('step one', 'step two', 'step three', 'step four');
 
 echo current($array) . "\n";
 

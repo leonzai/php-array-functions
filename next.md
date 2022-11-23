@@ -7,13 +7,13 @@ next ( array &$array ) : mixed
 
 ```php
 <?php
-$transport = [&#039;foot&#039;, &#039;bike&#039;, &#039;car&#039;, &#039;plane&#039;];
-$mode = current($transport); // $mode = &#039;foot&#039;;
-$mode = next($transport);    // $mode = &#039;bike&#039;;
-$mode = current($transport); // $mode = &#039;bike&#039;;
-$mode = prev($transport);    // $mode = &#039;foot&#039;;
-$mode = end($transport);     // $mode = &#039;plane&#039;;
-$mode = current($transport); // $mode = &#039;plane&#039;;
+$transport = ['foot', 'bike', 'car', 'plane'];
+$mode = current($transport); // $mode = 'foot';
+$mode = next($transport);    // $mode = 'bike';
+$mode = current($transport); // $mode = 'bike';
+$mode = prev($transport);    // $mode = 'foot';
+$mode = end($transport);     // $mode = 'plane';
+$mode = current($transport); // $mode = 'plane';
 
 $arr = array();
 var_dump(current($arr)); // bool(false)

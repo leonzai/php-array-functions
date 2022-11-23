@@ -5,8 +5,8 @@ array_fill_keys ( array $keys , mixed $value ) : array
 
 ```php
 <?php
-$keys = array(&#039;foo&#039;, 5, 10, &#039;bar&#039;);
-$a = array_fill_keys($keys, &#039;banana&#039;);
+$keys = array('foo', 5, 10, 'bar');
+$a = array_fill_keys($keys, 'banana');
 print_r($a);
 
 /*

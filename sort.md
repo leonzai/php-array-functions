@@ -58,11 +58,11 @@ foreach ($fruits as $key => $val) {
 
 ```php
 <?php
-$fruits = array(&#039;1c&#039;, &#039;a1&#039;, &#039;11b&#039;);
+$fruits = array('1c', 'a1', '11b');
 sort($fruits, SORT_NUMERIC);
 
 foreach ($fruits as $key => $val) {
-    echo "转化成数字：" . (int)$val . &#039;----&#039;;
+    echo "转化成数字：" . (int)$val . '----';
     echo " $val\n";
 }
 
@@ -75,7 +75,7 @@ foreach ($fruits as $key => $val) {
 
 ```php
 <?php
-$fruits = array(2, 15, 5, 3, &#039;a&#039;, &#039;A&#039;);
+$fruits = array(2, 15, 5, 3, 'a', 'A');
 sort($fruits, SORT_STRING);
 
 foreach ($fruits as $key => $val) {
@@ -94,7 +94,7 @@ foreach ($fruits as $key => $val) {
 
 ```php
 <?php
-$fruits = array(&#039;a1&#039;, &#039;a12&#039;, &#039;c1&#039;, &#039;c12&#039;, &#039;c2&#039;, &#039;c10&#039;);
+$fruits = array('a1', 'a12', 'c1', 'c12', 'c2', 'c10');
 sort($fruits, SORT_NATURAL);
 
 foreach ($fruits as $key => $val) {

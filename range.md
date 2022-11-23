@@ -14,12 +14,12 @@ foreach (range(0, 100, 10) as $number) {
 }
 echo "\n";
 
-foreach (range(&#039;a&#039;, &#039;i&#039;) as $letter) {
+foreach (range('a', 'i') as $letter) {
     echo $letter;
 }
 echo "\n";
 
-foreach (range(&#039;c&#039;, &#039;a&#039;) as $letter) {
+foreach (range('c', 'a') as $letter) {
     echo $letter;
 }
 

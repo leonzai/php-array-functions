@@ -30,9 +30,9 @@ Array
 
 ```php
 <?php
-$base = [&#039;citrus&#039; => ["orange"], &#039;berries&#039; => ["blackberry", "raspberry"], &#039;others&#039; => &#039;banana&#039;];
-$replacements = [&#039;citrus&#039; => &#039;pineapple&#039;, &#039;berries&#039; => [&#039;blueberry&#039;], &#039;others&#039; => [&#039;litchis&#039;]];
-$replacements2 = [&#039;citrus&#039; => [&#039;pineapple&#039;], &#039;berries&#039; => [&#039;blueberry&#039;], &#039;others&#039; => &#039;litchis&#039;];
+$base = ['citrus' => ["orange"], 'berries' => ["blackberry", "raspberry"], 'others' => 'banana'];
+$replacements = ['citrus' => 'pineapple', 'berries' => ['blueberry'], 'others' => ['litchis']];
+$replacements2 = ['citrus' => ['pineapple'], 'berries' => ['blueberry'], 'others' => 'litchis'];
 
 $basket = array_replace_recursive($base, $replacements, $replacements2);
 print_r($basket);

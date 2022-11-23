@@ -7,6 +7,6 @@ end ( array &$array ) : mixed
 ```php
 <?php
 
-$fruits = array(&#039;apple&#039;, &#039;banana&#039;, &#039;cranberry&#039;);
+$fruits = array('apple', 'banana', 'cranberry');
 echo end($fruits); // cranberry
 ```

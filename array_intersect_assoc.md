@@ -6,7 +6,7 @@ array_intersect_assoc ( array $array1 , array $array2 [, array $... ] ) : array
 
 ```php
 <?php
-$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red", &#039;name&#039; => "");
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red", 'name' => "");
 $array2 = array("a" => "green", "b" => "yellow", "blue", "red", "name" => false);
 $result = array_intersect_assoc($array1, $array2);
 var_dump($result);

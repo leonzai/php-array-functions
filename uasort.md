@@ -12,8 +12,8 @@ function cmp($a, $b)
     return ($a < $b) ? -1 : 1;
 }
 
-$array = [&#039;a&#039; => 4, &#039;b&#039; => 8, &#039;c&#039; => -1, &#039;d&#039; => -9,];
-uasort($array, &#039;cmp&#039;);
+$array = ['a' => 4, 'b' => 8, 'c' => -1, 'd' => -9,];
+uasort($array, 'cmp');
 
 print_r($array);
 

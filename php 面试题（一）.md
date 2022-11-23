@@ -14,7 +14,7 @@ PHP 5 里，list() 从最右边的参数开始赋值； PHP 7 里，list() 从�
 
 ```php
 <?php
-$info = array(&#039;coffee&#039;, &#039;brown&#039;, &#039;caffeine&#039;);
+$info = array('coffee', 'brown', 'caffeine');
 list($a[0], $a[1], $a[2]) = $info;
 var_dump($a);
 /**

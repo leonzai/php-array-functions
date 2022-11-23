@@ -22,12 +22,12 @@ array(3) {
 
 # 计算某个键值对出现的次数
 $list = [
-    [&#039;id&#039; => 1, &#039;userId&#039; => 5],
-    [&#039;id&#039; => 2, &#039;userId&#039; => 5],
-    [&#039;id&#039; => 3, &#039;userId&#039; => 6],
+    ['id' => 1, 'userId' => 5],
+    ['id' => 2, 'userId' => 5],
+    ['id' => 3, 'userId' => 6],
 ];
 
-echo array_count_values(array_column($list, &#039;userId&#039;))[5];
+echo array_count_values(array_column($list, 'userId'))[5];
 
 /*
 2

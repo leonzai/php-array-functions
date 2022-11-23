@@ -15,7 +15,7 @@ $array = ["blue", "red", 1, "1", "blue"];
 print_r(array_keys($array, "1", true));
 
 $array = ["blue", "red", ["green"], "blue", "blue"];
-print_r(array_keys($array, [&#039;green&#039;]));
+print_r(array_keys($array, ['green']));
 
 /*
 Array

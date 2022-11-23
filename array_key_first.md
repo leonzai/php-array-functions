@@ -7,7 +7,7 @@ array_key_first ( array $array ) : mixed
 
 ```php
 <?php
-$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
 
 $firstKey = array_key_first($array);
 
@@ -21,7 +21,7 @@ string(1) "a"
 **如果是老版 php，请用下面函数代替**
 
 ```php
-if (!function_exists(&#039;array_key_first&#039;)) {
+if (!function_exists('array_key_first')) {
     function array_key_first(array $arr) {
         foreach($arr as $key => $unused) {
             return $key;

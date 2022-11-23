@@ -8,13 +8,13 @@ array_key_exists ( mixed $key , array $array ) : bool
 ```php
 <?php
 $arr = [
-    &#039;first&#039; => 1,
-    &#039;second&#039; => null
+    'first' => 1,
+    'second' => null
 ];
 
-var_dump(array_key_exists(&#039;first&#039;, $arr));
-var_dump(array_key_exists(&#039;second&#039;, $arr));
-var_dump(isset($arr[&#039;second&#039;]));
+var_dump(array_key_exists('first', $arr));
+var_dump(array_key_exists('second', $arr));
+var_dump(isset($arr['second']));
 
 /*
 bool(true)

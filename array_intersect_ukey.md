@@ -11,7 +11,7 @@ array_intersect_ukey ( array $array1 , array $array2 [, array $... ], callable $
 <?php
 function key_compare_func($key1, $key2)
 {
-    echo(str_pad($key1, 10) . &#039; - &#039; . $key2 . "\n");
+    echo(str_pad($key1, 10) . ' - ' . $key2 . "\n");
 
     if ($key1 == $key2){
         return 0;
@@ -24,10 +24,10 @@ function key_compare_func($key1, $key2)
     return -1;
 }
 
-$array1 = array(&#039;blue&#039; => 1, &#039;red&#039; => 2, &#039;green&#039; => 3, &#039;purple&#039; => 4);
-$array2 = array(&#039;green&#039; => 5, &#039;blue&#039; => 6, &#039;yellow&#039; => 7, &#039;cyan&#039; => 8);
+$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
 
-var_dump(array_intersect_ukey($array1, $array2, &#039;key_compare_func&#039;));
+var_dump(array_intersect_ukey($array1, $array2, 'key_compare_func'));
 /*
 blue       - red
 red        - green

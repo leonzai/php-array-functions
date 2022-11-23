@@ -8,8 +8,8 @@ array_combine( array $keys, array $values) : array
 
 ```php
 <?php
-$a = array(&#039;green&#039;, &#039;red&#039;, &#039;yellow&#039;);
-$b = array(&#039;avocado&#039;, &#039;apple&#039;, &#039;banana&#039;);
+$a = array('green', 'red', 'yellow');
+$b = array('avocado', 'apple', 'banana');
 $c = array_combine($a, $b);
 var_dump($c);
 
@@ -35,7 +35,7 @@ class User
 }
 
 $a = array(new User(),);
-$b = array(&#039;avocado&#039;,);
+$b = array('avocado',);
 $c = array_combine($a, $b);
 var_dump($c);
 

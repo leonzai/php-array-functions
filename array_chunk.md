@@ -9,7 +9,7 @@ array_chunk ( array $array , int $size [, bool $preserve_keys] ) : array
 ```php
 <?php
 
-$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
 $result = array_chunk($array, 2);
 var_dump($result);
 
@@ -30,7 +30,7 @@ array(2) {
 }
 */
 
-$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
 $result = array_chunk($array, 2, true);
 var_dump($result);
 

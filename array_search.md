@@ -8,10 +8,10 @@ array_search ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : mix
 
 ```php
 <?php
-$array = [0 => &#039;blue&#039;, 1 => &#039;red&#039;, 2 => &#039;green&#039;, 3 => &#039;red&#039;];
+$array = [0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red'];
 
-$key1 = array_search(&#039;green&#039;, $array);
-$key2 = array_search(&#039;red&#039;, $array);
+$key1 = array_search('green', $array);
+$key2 = array_search('red', $array);
 
 var_dump($key1);
 var_dump($key2);

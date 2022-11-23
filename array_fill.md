@@ -4,8 +4,8 @@ array_fill ( int $start_index , int $num , mixed $value ) : array
 
 ```php
 <?php
-$a = array_fill(5, 6, &#039;banana&#039;);
-$b = array_fill(-2, 4, &#039;pear&#039;);
+$a = array_fill(5, 6, 'banana');
+$b = array_fill(-2, 4, 'pear');
 print_r($a);
 print_r($b);
 
