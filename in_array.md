@@ -7,19 +7,19 @@ in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : bool
 3. 第三个参数是 true 代表全等才算匹配成功，默认是 false，表示只要相等，不管类型是否一样就是匹配成功。
 
 ```php
-&lt;?php
+<?php
 $a = [[&#039;p&#039;, &#039;h&#039;], [&#039;p&#039;, &#039;r&#039;], &#039;o&#039;];
 
 if (in_array([&#039;p&#039;, &#039;h&#039;], $a)) {
-    echo &quot;&#039;ph&#039; was found\n&quot;;
+    echo "&#039;ph&#039; was found\n";
 }
 
 if (in_array([&#039;f&#039;, &#039;i&#039;], $a)) {
-    echo &quot;&#039;fi&#039; was found\n&quot;;
+    echo "&#039;fi&#039; was found\n";
 }
 
 if (in_array(&#039;o&#039;, $a)) {
-    echo &quot;&#039;o&#039; was found\n&quot;;
+    echo "&#039;o&#039; was found\n";
 }
 
 /*

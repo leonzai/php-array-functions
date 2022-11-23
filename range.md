@@ -3,21 +3,21 @@ range ( mixed $start , mixed $end [, number $step = 1 ] ) : array
 ```
 
 ```php
-&lt;?php
+<?php
 foreach (range(0, 12) as $number) {
     echo $number;
 }
-echo &quot;\n&quot;;
+echo "\n";
 
 foreach (range(0, 100, 10) as $number) {
     echo $number;
 }
-echo &quot;\n&quot;;
+echo "\n";
 
 foreach (range(&#039;a&#039;, &#039;i&#039;) as $letter) {
     echo $letter;
 }
-echo &quot;\n&quot;;
+echo "\n";
 
 foreach (range(&#039;c&#039;, &#039;a&#039;) as $letter) {
     echo $letter;

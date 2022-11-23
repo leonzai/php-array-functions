@@ -6,16 +6,16 @@ array_filter ( array $array [, callable $callback [, int $flag = 0 ]] ) : array
 3. 不要在回调函数中改变数组。
 
 ```php
-&lt;?php
+<?php
 
 $entry = [
-    0 =&gt; &#039;foo&#039;,
-    1 =&gt; false,
-    2 =&gt; -1,
-    3 =&gt; null,
-    4 =&gt; &#039;&#039;,
-    5 =&gt; &#039;0&#039;,
-    6 =&gt; 0,
+    0 => &#039;foo&#039;,
+    1 => false,
+    2 => -1,
+    3 => null,
+    4 => &#039;&#039;,
+    5 => &#039;0&#039;,
+    6 => 0,
 ];
 
 print_r(array_filter($entry));
@@ -23,16 +23,16 @@ print_r(array_filter($entry));
 /*
 Array
 (
-    [0] =&gt; foo
-    [2] =&gt; -1
+    [0] => foo
+    [2] => -1
 )
 */
 ```
 
 ```php
-&lt;?php
+<?php
 
-$arr = [&#039;a&#039; =&gt; 1, &#039;b&#039; =&gt; 2, &#039;c&#039; =&gt; 3, &#039;d&#039; =&gt; 4];
+$arr = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3, &#039;d&#039; => 4];
 
 var_dump(array_filter($arr, function ($k) {
     return $k == &#039;b&#039;;
@@ -44,50 +44,50 @@ var_dump(array_filter($arr, function ($v, $k) {
 
 /*
 array(1) {
-  [&quot;b&quot;]=&gt;
+  ["b"]=>
   int(2)
 }
 array(2) {
-  [&quot;b&quot;]=&gt;
+  ["b"]=>
   int(2)
-  [&quot;d&quot;]=&gt;
+  ["d"]=>
   int(4)
 }
 */
 ```
 
 ```php
-&lt;?php
+<?php
 function odd($var)
 {
-    return $var &amp; 1;
+    return $var & 1;
 }
 
 function even($var)
 {
-    return !($var &amp; 1);
+    return !($var & 1);
 }
 
-$array1 = [&#039;a&#039; =&gt; 1, &#039;b&#039; =&gt; 2, &#039;c&#039; =&gt; 3, &#039;d&#039; =&gt; 4, &#039;e&#039; =&gt; 5];
+$array1 = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3, &#039;d&#039; => 4, &#039;e&#039; => 5];
 $array2 = [6, 7, 8, 9, 10, 11, 12];
 
-print_r(array_filter($array1, &quot;odd&quot;));
+print_r(array_filter($array1, "odd"));
 
-print_r(array_filter($array2, &quot;even&quot;));
+print_r(array_filter($array2, "even"));
 
 /*
 Array
 (
-    [a] =&gt; 1
-    [c] =&gt; 3
-    [e] =&gt; 5
+    [a] => 1
+    [c] => 3
+    [e] => 5
 )
 Array
 (
-    [0] =&gt; 6
-    [2] =&gt; 8
-    [4] =&gt; 10
-    [6] =&gt; 12
+    [0] => 6
+    [2] => 8
+    [4] => 10
+    [6] => 12
 )
 */
 ```

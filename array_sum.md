@@ -5,14 +5,14 @@ array_sum ( array $array ) : number
 1. 空数组返回 0。
 
 ```php
-&lt;?php
+<?php
 $a = [2, 4, 6, 8];
-echo &quot;数组 a 求和：&quot; . array_sum($a) . &quot;\n&quot;;
+echo "数组 a 求和：" . array_sum($a) . "\n";
 
-$b = [&quot;a&quot; =&gt; 1.2, &quot;b&quot; =&gt; 2.3, &quot;c&quot; =&gt; 3.4];
-echo &quot;数组 b 求和：&quot; . array_sum($b) . &quot;\n&quot;;
+$b = ["a" => 1.2, "b" => 2.3, "c" => 3.4];
+echo "数组 b 求和：" . array_sum($b) . "\n";
 
-echo &quot;数组 a 求平均数：&quot; . array_sum($a) / count($a);
+echo "数组 a 求平均数：" . array_sum($a) / count($a);
 
 /*
 数组 a 求和：20

@@ -1,16 +1,16 @@
 ```php
-shuffle ( array &amp;$array ) : bool
+shuffle ( array &$array ) : bool
 ```
 
 ```php
-&lt;?php
+<?php
 $array = [
-    &quot;a&quot; =&gt; 3,
-    &quot;a1&quot; =&gt; 2,
-    &quot;a2&quot; =&gt; 1,
-    &quot;a3&quot; =&gt; 4,
-    &quot;a4&quot; =&gt; 5,
-    &quot;a5&quot; =&gt; 12,
+    "a" => 3,
+    "a1" => 2,
+    "a2" => 1,
+    "a3" => 4,
+    "a4" => 5,
+    "a5" => 12,
 ];
 
 shuffle($array);
@@ -19,12 +19,12 @@ print_r($array);
 /*
 Array
 (
-    [0] =&gt; 2
-    [1] =&gt; 5
-    [2] =&gt; 3
-    [3] =&gt; 12
-    [4] =&gt; 4
-    [5] =&gt; 1
+    [0] => 2
+    [1] => 5
+    [2] => 3
+    [3] => 12
+    [4] => 4
+    [5] => 1
 )
 */
 ```

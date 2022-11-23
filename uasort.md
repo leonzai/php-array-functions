@@ -1,18 +1,18 @@
 ```php
-uasort ( array &amp;$array , callable $value_compare_func ) : bool
+uasort ( array &$array , callable $value_compare_func ) : bool
 ```
 
 ```php
-&lt;?php
+<?php
 function cmp($a, $b)
 {
     if ($a == $b) {
         return 0;
     }
-    return ($a &lt; $b) ? -1 : 1;
+    return ($a < $b) ? -1 : 1;
 }
 
-$array = [&#039;a&#039; =&gt; 4, &#039;b&#039; =&gt; 8, &#039;c&#039; =&gt; -1, &#039;d&#039; =&gt; -9,];
+$array = [&#039;a&#039; => 4, &#039;b&#039; => 8, &#039;c&#039; => -1, &#039;d&#039; => -9,];
 uasort($array, &#039;cmp&#039;);
 
 print_r($array);
@@ -20,10 +20,10 @@ print_r($array);
 /*
 Array
 (
-    [d] =&gt; -9
-    [c] =&gt; -1
-    [a] =&gt; 4
-    [b] =&gt; 8
+    [d] => -9
+    [c] => -1
+    [a] => 4
+    [b] => 8
 )
 */
 ```

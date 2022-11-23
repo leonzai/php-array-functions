@@ -13,29 +13,29 @@
 PHP 5 里，list() 从最右边的参数开始赋值； PHP 7 里，list() 从最左边的参数开始赋值。（不建议依赖于操作的顺序，在未来可能会再次发生修改。）
 
 ```php
-&lt;?php
+<?php
 $info = array(&#039;coffee&#039;, &#039;brown&#039;, &#039;caffeine&#039;);
 list($a[0], $a[1], $a[2]) = $info;
 var_dump($a);
 /**
 php 7 输出：
 array(3) {
-  [0]=&gt;
-  string(6) &quot;coffee&quot;
-  [1]=&gt;
-  string(5) &quot;brown&quot;
-  [2]=&gt;
-  string(8) &quot;caffeine&quot;
+  [0]=>
+  string(6) "coffee"
+  [1]=>
+  string(5) "brown"
+  [2]=>
+  string(8) "caffeine"
 }
 
 php 5 输出：
 array(3) {
-  [2]=&gt;
-  string(8) &quot;caffeine&quot;
-  [1]=&gt;
-  string(5) &quot;brown&quot;
-  [0]=&gt;
-  string(6) &quot;coffee&quot;
+  [2]=>
+  string(8) "caffeine"
+  [1]=>
+  string(5) "brown"
+  [0]=>
+  string(6) "coffee"
 }
 */
 ```

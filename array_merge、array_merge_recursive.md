@@ -10,22 +10,22 @@ array_merge_recursive ([ array $... ] ) : array
 4. 数字索引的数组在合并时候会被重新索引，从 0 开始，不会保留之前的索引。
 
 ```php
-&lt;?php
-$array1 = array(&quot;color&quot; =&gt; &quot;red&quot;, 2 =&gt; 2, 4);
-$array2 = array(&quot;a&quot;, &quot;b&quot;, &quot;color&quot; =&gt; &quot;green&quot;, &quot;shape&quot; =&gt; &quot;trapezoid&quot;, 2 =&gt; 4);
+<?php
+$array1 = array("color" => "red", 2 => 2, 4);
+$array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 2 => 4);
 $result = array_merge($array1, $array2);
 print_r($result);
 
 /*
 Array
 (
-    [color] =&gt; green
-    [0] =&gt; 2
-    [1] =&gt; 4
-    [2] =&gt; a
-    [3] =&gt; b
-    [shape] =&gt; trapezoid
-    [4] =&gt; 4
+    [color] => green
+    [0] => 2
+    [1] => 4
+    [2] => a
+    [3] => b
+    [shape] => trapezoid
+    [4] => 4
 )
 */
 ```
@@ -33,28 +33,28 @@ Array
 # 请注意，当使用 array_merge_recursive 时候，相同的键名不会覆盖，而是并存。
 
 ```php
-&lt;?php
-$ar1 = array(&quot;color&quot; =&gt; array(&quot;favorite&quot; =&gt; &quot;red&quot;), 5);
-$ar2 = array(10, &quot;color&quot; =&gt; array(&quot;favorite&quot; =&gt; &quot;green&quot;, &quot;blue&quot;));
+<?php
+$ar1 = array("color" => array("favorite" => "red"), 5);
+$ar2 = array(10, "color" => array("favorite" => "green", "blue"));
 $result = array_merge_recursive($ar1, $ar2);
 print_r($result);
 
 /**
 Array
 (
-    [color] =&gt; Array
+    [color] => Array
         (
-            [favorite] =&gt; Array
+            [favorite] => Array
                 (
-                    [0] =&gt; red
-                    [1] =&gt; green
+                    [0] => red
+                    [1] => green
                 )
 
-            [0] =&gt; blue
+            [0] => blue
         )
 
-    [0] =&gt; 5
-    [1] =&gt; 10
+    [0] => 5
+    [1] => 10
 )
 */
 ```

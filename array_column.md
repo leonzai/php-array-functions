@@ -7,62 +7,62 @@ array_column ( array $input , mixed $column_key [, mixed $index_key = NULL ] ) :
 ```
 
 ```php
-&lt;?php
+<?php
 
 $arr = [
-    [&#039;id&#039; =&gt; 11, &#039;name&#039; =&gt; &#039;a&#039;,],
-    [&#039;id&#039; =&gt; 12, &#039;name&#039; =&gt; &#039;a&#039;,],
+    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
+    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
 ];
 $result = array_column($arr, &#039;name&#039;);
 var_dump($result);
 
 /*
 array(2) {
-  [0]=&gt;
-  string(1) &quot;a&quot;
-  [1]=&gt;
-  string(1) &quot;a&quot;
+  [0]=>
+  string(1) "a"
+  [1]=>
+  string(1) "a"
 }
 */
 
 $arr = [
-    [&#039;id&#039; =&gt; 11, &#039;name&#039; =&gt; &#039;a&#039;,],
-    [&#039;id&#039; =&gt; 12, &#039;name&#039; =&gt; &#039;a&#039;,],
+    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
+    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
 ];
 $result = array_column($arr, &#039;name&#039;, &#039;id&#039;);
 var_dump($result);
 
 /*
 array(2) {
-  [11]=&gt;
-  string(1) &quot;a&quot;
-  [12]=&gt;
-  string(1) &quot;a&quot;
+  [11]=>
+  string(1) "a"
+  [12]=>
+  string(1) "a"
 }
 */
 
 $arr = [
-    [&#039;id&#039; =&gt; 11, &#039;name&#039; =&gt; &#039;a&#039;,],
-    [&#039;id&#039; =&gt; 12, &#039;name&#039; =&gt; &#039;a&#039;,],
+    [&#039;id&#039; => 11, &#039;name&#039; => &#039;a&#039;,],
+    [&#039;id&#039; => 12, &#039;name&#039; => &#039;a&#039;,],
 ];
 $result = array_column($arr, null, &#039;id&#039;);
 var_dump($result);
 
 /*
 array(2) {
-  [11]=&gt;
+  [11]=>
   array(2) {
-    [&quot;id&quot;]=&gt;
+    ["id"]=>
     int(11)
-    [&quot;name&quot;]=&gt;
-    string(1) &quot;a&quot;
+    ["name"]=>
+    string(1) "a"
   }
-  [12]=&gt;
+  [12]=>
   array(2) {
-    [&quot;id&quot;]=&gt;
+    ["id"]=>
     int(12)
-    [&quot;name&quot;]=&gt;
-    string(1) &quot;a&quot;
+    ["name"]=>
+    string(1) "a"
   }
 }
 */
@@ -73,7 +73,7 @@ class User
 
     public function __construct(string $username)
     {
-        $this-&gt;username = $username;
+        $this->username = $username;
     }
 }
 
@@ -87,10 +87,10 @@ var_dump($result);
 
 /*
 array(2) {
-  [0]=&gt;
-  string(6) &quot;user 1&quot;
-  [1]=&gt;
-  string(6) &quot;user 2&quot;
+  [0]=>
+  string(6) "user 1"
+  [1]=>
+  string(6) "user 2"
 }
 */
 ```

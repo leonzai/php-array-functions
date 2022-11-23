@@ -8,24 +8,24 @@ array_intersect_ukey ( array $array1 , array $array2 [, array $... ], callable $
 4. 比较的时候如果键相等，就开始下次循环比较，并且从第一个数组中下一个元素开始比较。
 
 ```php
-&lt;?php
+<?php
 function key_compare_func($key1, $key2)
 {
-    echo(str_pad($key1, 10) . &#039; - &#039; . $key2 . &quot;\n&quot;);
+    echo(str_pad($key1, 10) . &#039; - &#039; . $key2 . "\n");
 
     if ($key1 == $key2){
         return 0;
     }
 
-    if ($key1 &gt; $key2){
+    if ($key1 > $key2){
         return 1;
     }
 
     return -1;
 }
 
-$array1 = array(&#039;blue&#039; =&gt; 1, &#039;red&#039; =&gt; 2, &#039;green&#039; =&gt; 3, &#039;purple&#039; =&gt; 4);
-$array2 = array(&#039;green&#039; =&gt; 5, &#039;blue&#039; =&gt; 6, &#039;yellow&#039; =&gt; 7, &#039;cyan&#039; =&gt; 8);
+$array1 = array(&#039;blue&#039; => 1, &#039;red&#039; => 2, &#039;green&#039; => 3, &#039;purple&#039; => 4);
+$array2 = array(&#039;green&#039; => 5, &#039;blue&#039; => 6, &#039;yellow&#039; => 7, &#039;cyan&#039; => 8);
 
 var_dump(array_intersect_ukey($array1, $array2, &#039;key_compare_func&#039;));
 /*
@@ -46,9 +46,9 @@ green      - green
 purple     - yellow
 red        - yellow
 array(2) {
-  [&quot;blue&quot;]=&gt;
+  ["blue"]=>
   int(1)
-  [&quot;green&quot;]=&gt;
+  ["green"]=>
   int(3)
 }
 */

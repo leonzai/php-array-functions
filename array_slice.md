@@ -8,12 +8,12 @@ array_slice ( array $array , int $offset [, int $length = NULL [, bool $preserve
 4. 参数 $preserve_keys 保留数字索引，默认不保留。无论参数值是什么，字符串索引始终保留。
 
 ```php
-&lt;?php
-$input = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;];
+<?php
+$input = ["a", "b", "c", "d", "e"];
 
-$output = array_slice($input, 2);      //  &quot;c&quot;, &quot;d&quot;, and &quot;e&quot;
-$output = array_slice($input, -2, 1);  //  &quot;d&quot;
-$output = array_slice($input, 0, 3);   //  &quot;a&quot;, &quot;b&quot;, and &quot;c&quot;
+$output = array_slice($input, 2);      //  "c", "d", and "e"
+$output = array_slice($input, -2, 1);  //  "d"
+$output = array_slice($input, 0, 3);   //  "a", "b", and "c"
 
 print_r(array_slice($input, 2, -1));
 print_r(array_slice($input, 2, -1, true));
@@ -21,13 +21,13 @@ print_r(array_slice($input, 2, -1, true));
 /*
 Array
 (
-    [0] =&gt; c
-    [1] =&gt; d
+    [0] => c
+    [1] => d
 )
 Array
 (
-    [2] =&gt; c
-    [3] =&gt; d
+    [2] => c
+    [3] => d
 )
 */
 ```

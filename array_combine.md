@@ -7,7 +7,7 @@ array_combine( array $keys, array $values) : array
 ```
 
 ```php
-&lt;?php
+<?php
 $a = array(&#039;green&#039;, &#039;red&#039;, &#039;yellow&#039;);
 $b = array(&#039;avocado&#039;, &#039;apple&#039;, &#039;banana&#039;);
 $c = array_combine($a, $b);
@@ -15,22 +15,22 @@ var_dump($c);
 
 /*
 array(3) {
-  [&quot;green&quot;]=&gt;
-  string(7) &quot;avocado&quot;
-  [&quot;red&quot;]=&gt;
-  string(5) &quot;apple&quot;
-  [&quot;yellow&quot;]=&gt;
-  string(6) &quot;banana&quot;
+  ["green"]=>
+  string(7) "avocado"
+  ["red"]=>
+  string(5) "apple"
+  ["yellow"]=>
+  string(6) "banana"
 }
 */
 
 class User
 {
-    public $name = &quot;xxx&quot;;
+    public $name = "xxx";
 
     public function __toString()
     {
-        return $this-&gt;name;
+        return $this->name;
     }
 }
 
@@ -41,8 +41,8 @@ var_dump($c);
 
 /*
 array(1) {
-  [&quot;xxx&quot;]=&gt;
-  string(7) &quot;avocado&quot;
+  ["xxx"]=>
+  string(7) "avocado"
 }
 */
 ```

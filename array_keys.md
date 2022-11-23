@@ -10,21 +10,21 @@ array_keys ( array $array , mixed $search_value [, bool $strict = FALSE ] ) : ar
 ```
 
 ```php
-&lt;?php
-$array = [&quot;blue&quot;, &quot;red&quot;, 1, &quot;1&quot;, &quot;blue&quot;];
-print_r(array_keys($array, &quot;1&quot;, true));
+<?php
+$array = ["blue", "red", 1, "1", "blue"];
+print_r(array_keys($array, "1", true));
 
-$array = [&quot;blue&quot;, &quot;red&quot;, [&quot;green&quot;], &quot;blue&quot;, &quot;blue&quot;];
+$array = ["blue", "red", ["green"], "blue", "blue"];
 print_r(array_keys($array, [&#039;green&#039;]));
 
 /*
 Array
 (
-    [0] =&gt; 3
+    [0] => 3
 )
 Array
 (
-    [0] =&gt; 2
+    [0] => 2
 )
 */
 ```

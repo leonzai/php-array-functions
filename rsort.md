@@ -1,5 +1,5 @@
 ```php
-rsort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] ) : bool
+rsort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool
 ```
 与 `sort` 函数的**唯一区别**是：排序的方向不同。
 
@@ -8,17 +8,17 @@ rsort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] ) : bool
 [https://qianjinyike.com/【sort】排序数组（不再保留键名）](https://qianjinyike.com/【sort】排序数组（不再保留键名） "https://qianjinyike.com/【sort】排序数组（不再保留键名）")
 
 ```php
-&lt;?php
+<?php
 $fruits = [
-    &quot;d&quot; =&gt; &quot;lemon&quot;,
-    &quot;a&quot; =&gt; &quot;orange&quot;,
-    &quot;b&quot; =&gt; &quot;banana&quot;,
-    &quot;c&quot; =&gt; &quot;apple&quot;,
+    "d" => "lemon",
+    "a" => "orange",
+    "b" => "banana",
+    "c" => "apple",
 ];
 rsort($fruits);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;$key = $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "$key = $val\n";
 }
 
 /*

@@ -3,35 +3,35 @@ array_intersect ( array $array1 , array $array2 [, array $... ] ) : array
 ```
 
 ```php
-&lt;?php
-$array1 = array(&quot;a&quot; =&gt; &quot;green&quot;, &quot;red&quot;, &quot;blue&quot;);
-$array2 = array(&quot;b&quot; =&gt; &quot;green&quot;, &quot;yellow&quot;, &quot;red&quot;);
+<?php
+$array1 = array("a" => "green", "red", "blue");
+$array2 = array("b" => "green", "yellow", "red");
 $result = array_intersect($array1, $array2);
 
 var_dump($result);
 
 /*
 array(2) {
-  [&quot;a&quot;]=&gt;
-  string(5) &quot;green&quot;
-  [0]=&gt;
-  string(3) &quot;red&quot;
+  ["a"]=>
+  string(5) "green"
+  [0]=>
+  string(3) "red"
 }
 */
 
-&lt;?php
-$array1 = array(&quot;a&quot; =&gt; &quot;green&quot;, &quot;green&quot;, &quot;blue&quot;);
-$array2 = array(&quot;b&quot; =&gt; &quot;green&quot;, &quot;yellow&quot;, &quot;red&quot;);
+<?php
+$array1 = array("a" => "green", "green", "blue");
+$array2 = array("b" => "green", "yellow", "red");
 $result = array_intersect($array1, $array2);
 
 var_dump($result);
 
 /*
 array(2) {
-  [&quot;a&quot;]=&gt;
-  string(5) &quot;green&quot;
-  [0]=&gt;
-  string(5) &quot;green&quot;
+  ["a"]=>
+  string(5) "green"
+  [0]=>
+  string(5) "green"
 }
 */
 ```

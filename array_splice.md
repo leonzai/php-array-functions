@@ -1,5 +1,5 @@
 ```php
-array_splice ( array &amp;$input , int $offset [, int $length = count($input) [, mixed $replacement = array() ]] ) : array
+array_splice ( array &$input , int $offset [, int $length = count($input) [, mixed $replacement = array() ]] ) : array
 ```
 
 1. 参数 $input 是要处理的数组， $offset 和 $length 表达了要移除的部分，$replacement 是要替换移除部分的内容。该参数的数字键不被保留。
@@ -8,53 +8,53 @@ array_splice ( array &amp;$input , int $offset [, int $length = count($input) [,
 4. 参数 $replacement 中的键不会保留，如果该参数不是数组，会强制转化成数组，如果是一个对象或者是 null，最终的行为不可预测。
 
 ```php
-&lt;?php
-$input = array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;);
+<?php
+$input = array("red", "green", "blue", "yellow");
 array_splice($input, 2);
 var_dump($input);
 
-$input = array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;);
+$input = array("red", "green", "blue", "yellow");
 array_splice($input, 1, -1);
 var_dump($input);
 
-$input = array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;);
-array_splice($input, 1, count($input), &quot;orange&quot;);
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, 1, count($input), "orange");
 var_dump($input);
 
-$input = array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;);
-array_splice($input, -1, 1, array(&quot;black&quot;, &quot;maroon&quot;));
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, -1, 1, array("black", "maroon"));
 var_dump($input);
 
 /*
 array(2) {
-  [0]=&gt;
-  string(3) &quot;red&quot;
-  [1]=&gt;
-  string(5) &quot;green&quot;
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(5) "green"
 }
 array(2) {
-  [0]=&gt;
-  string(3) &quot;red&quot;
-  [1]=&gt;
-  string(6) &quot;yellow&quot;
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(6) "yellow"
 }
 array(2) {
-  [0]=&gt;
-  string(3) &quot;red&quot;
-  [1]=&gt;
-  string(6) &quot;orange&quot;
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(6) "orange"
 }
 array(5) {
-  [0]=&gt;
-  string(3) &quot;red&quot;
-  [1]=&gt;
-  string(5) &quot;green&quot;
-  [2]=&gt;
-  string(4) &quot;blue&quot;
-  [3]=&gt;
-  string(5) &quot;black&quot;
-  [4]=&gt;
-  string(6) &quot;maroon&quot;
+  [0]=>
+  string(3) "red"
+  [1]=>
+  string(5) "green"
+  [2]=>
+  string(4) "blue"
+  [3]=>
+  string(5) "black"
+  [4]=>
+  string(6) "maroon"
 }
 */
 ```

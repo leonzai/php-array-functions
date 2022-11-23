@@ -7,45 +7,45 @@ array_chunk ( array $array , int $size [, bool $preserve_keys] ) : array
 ```
 
 ```php
-&lt;?php
+<?php
 
-$array = [&#039;a&#039; =&gt; 1, &#039;b&#039; =&gt; 2, &#039;c&#039; =&gt; 3];
+$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
 $result = array_chunk($array, 2);
 var_dump($result);
 
 /*
 array(2) {
-  [0]=&gt;
+  [0]=>
   array(2) {
-    [0]=&gt;
+    [0]=>
     int(1)
-    [1]=&gt;
+    [1]=>
     int(2)
   }
-  [1]=&gt;
+  [1]=>
   array(1) {
-    [0]=&gt;
+    [0]=>
     int(3)
   }
 }
 */
 
-$array = [&#039;a&#039; =&gt; 1, &#039;b&#039; =&gt; 2, &#039;c&#039; =&gt; 3];
+$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
 $result = array_chunk($array, 2, true);
 var_dump($result);
 
 /*
 array(2) {
-  [0]=&gt;
+  [0]=>
   array(2) {
-    [&quot;a&quot;]=&gt;
+    ["a"]=>
     int(1)
-    [&quot;b&quot;]=&gt;
+    ["b"]=>
     int(2)
   }
-  [1]=&gt;
+  [1]=>
   array(1) {
-    [&quot;c&quot;]=&gt;
+    ["c"]=>
     int(3)
   }
 }

@@ -6,22 +6,22 @@ array_key_last ( array $array ) : mixed
 ```
 
 ```php
-&lt;?php
-$array = [&#039;a&#039; =&gt; 1, &#039;b&#039; =&gt; 2, &#039;c&#039; =&gt; 3];
+<?php
+$array = [&#039;a&#039; => 1, &#039;b&#039; => 2, &#039;c&#039; => 3];
 
 $res = array_key_last($array);
 
 var_dump($res);
 
 /*
-string(1) &quot;c&quot;
+string(1) "c"
 */
 ```
 
 **如果是老版 php，请用下面函数代替**
 
 ```php
-if (!function_exists(&quot;array_key_last&quot;)) {
+if (!function_exists("array_key_last")) {
     function array_key_last($array)
     {
         if (!is_array($array) || empty($array)) {

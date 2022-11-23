@@ -7,22 +7,22 @@ compact ( mixed $varname1 [, mixed $... ] ) : array
 3. 参数不可以是超全局数组，诸如 `$_GET` 之类。
 
 ```php
-&lt;?php
-$city  = &quot;San Francisco&quot;;
-$state = &quot;CA&quot;;
-$event = &quot;SIGGRAPH&quot;;
+<?php
+$city  = "San Francisco";
+$state = "CA";
+$event = "SIGGRAPH";
 
-$location_vars = array(&quot;city&quot;, &quot;state&quot;);
+$location_vars = array("city", "state");
 
-$result = compact(&quot;event&quot;, $location_vars);
+$result = compact("event", $location_vars);
 print_r($result);
 
 /*
 Array
 (
-    [event] =&gt; SIGGRAPH
-    [city] =&gt; San Francisco
-    [state] =&gt; CA
+    [event] => SIGGRAPH
+    [city] => San Francisco
+    [state] => CA
 )
 */
 ```

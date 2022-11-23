@@ -1,5 +1,5 @@
 ```php
-extract ( array &amp;$array [, int $flags = EXTR_OVERWRITE [, string $prefix = NULL ]] ) : int
+extract ( array &$array [, int $flags = EXTR_OVERWRITE [, string $prefix = NULL ]] ) : int
 ```
 
 | 第二个参数 $flags（用来处理非法的键名、数字键名、冲突键名） | 效果                                                         |
@@ -19,18 +19,18 @@ extract ( array &amp;$array [, int $flags = EXTR_OVERWRITE [, string $prefix = N
 4. 第三个参数可选。请注意 prefix 仅在第二个参数的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。如果附加了前缀后的结果不是合法的变量名，将直接跳过。前缀和数组键名之间会自动加上一个下划线。
 
 ```php
-&lt;?php
-$size = &quot;large&quot;;
+<?php
+$size = "large";
 
 $var_array = [
-    &quot;color&quot; =&gt; &quot;blue&quot;,
-    &quot;size&quot;  =&gt; &quot;medium&quot;,
-    &quot;shape&quot; =&gt; &quot;sphere&quot;
+    "color" => "blue",
+    "size"  => "medium",
+    "shape" => "sphere"
 ];
 
-extract($var_array, EXTR_PREFIX_SAME, &quot;a&quot;);
+extract($var_array, EXTR_PREFIX_SAME, "a");
 
-echo &quot;$color, $size, $shape, $a_size\n&quot;;
+echo "$color, $size, $shape, $a_size\n";
 
 /*
 blue, large, sphere, medium

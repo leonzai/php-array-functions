@@ -9,14 +9,14 @@
 4. 比较的时候如果键相等，不管值是否相等，就开始下次循环比较，下次循环比较会从第一个数组的下个元素开始比较（因为排序过，前面的不用比，肯定不相等）。
 
 ```php
-&lt;?php
-$array1 = array(&quot;d&quot; =&gt; &quot;GREEN&quot;, &quot;e&quot; =&gt; &quot;brown&quot;, &quot;f&quot; =&gt; 12);
-$array2 = array(&quot;e&quot; =&gt; &quot;green&quot;, &quot;f&quot; =&gt; &quot;brown&quot;, &quot;g&quot; =&gt; &quot;GREEN&quot;);
+<?php
+$array1 = array("d" => "GREEN", "e" => "brown", "f" => 12);
+$array2 = array("e" => "green", "f" => "brown", "g" => "GREEN");
 
 print_r(array_intersect_uassoc($array1, $array2, function ($a, $b) {
-    echo($a . &quot; === &quot; . $b . &quot;\n&quot;);
+    echo($a . " === " . $b . "\n");
     if ($a == $b) return 0;
-    if ($a &gt; $b) return 1;
+    if ($a > $b) return 1;
     return -1;
 }));
 

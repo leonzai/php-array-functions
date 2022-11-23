@@ -10,11 +10,11 @@ array_map ( callable $callback , array $array1 [, array $... ] ) : array
 | 回调函数   | 多个数组 | 将每个数组转化成索引数组，再将多个数组的每个值都依次传到回调函数中，将回调函数返回值组成新的数组作为 array_map 的返回值 |
 
 ```php
-&lt;?php
+<?php
 $a = [
-    [&#039;id&#039; =&gt; 1, &#039;name&#039; =&gt; &#039;千金&#039;],
-    [&#039;id&#039; =&gt; 2, &#039;name&#039; =&gt; null],
-    [&#039;id&#039; =&gt; 3, &#039;name&#039; =&gt; &#039;一刻&#039;],
+    [&#039;id&#039; => 1, &#039;name&#039; => &#039;千金&#039;],
+    [&#039;id&#039; => 2, &#039;name&#039; => null],
+    [&#039;id&#039; => 3, &#039;name&#039; => &#039;一刻&#039;],
 ];
 
 $res1 = [];
@@ -40,14 +40,14 @@ bool(true)
 ```
 
 ```php
-&lt;?php
-$arr = [&#039;stringkey&#039; =&gt; &#039;value&#039;];
+<?php
+$arr = [&#039;stringkey&#039; => &#039;value&#039;];
 var_dump(array_map(null,  $arr));
 
 /*
 array(1) {
-  [&quot;stringkey&quot;]=&gt;
-  string(5) &quot;value&quot;
+  ["stringkey"]=>
+  string(5) "value"
 }
 */
 
@@ -61,25 +61,25 @@ print_r($d);
 /*
 Array
 (
-    [0] =&gt; Array
+    [0] => Array
         (
-            [0] =&gt; 1
-            [1] =&gt; one
-            [2] =&gt; uno
+            [0] => 1
+            [1] => one
+            [2] => uno
         )
 
-    [1] =&gt; Array
+    [1] => Array
         (
-            [0] =&gt; 2
-            [1] =&gt; two
-            [2] =&gt; dos
+            [0] => 2
+            [1] => two
+            [2] => dos
         )
 
-    [2] =&gt; Array
+    [2] => Array
         (
-            [0] =&gt; 3
-            [1] =&gt; three
-            [2] =&gt;
+            [0] => 3
+            [1] => three
+            [2] =>
         )
 
 )
@@ -90,32 +90,32 @@ function triple($n)
     return $n * 3;
 }
 
-$a = [1, 2, 3, &quot;xx&quot; =&gt; 4, 5];
+$a = [1, 2, 3, "xx" => 4, 5];
 $b = array_map(&#039;triple&#039;, $a);
 print_r($b);
 
 /*
 Array
 (
-    [0] =&gt; 3
-    [1] =&gt; 6
-    [2] =&gt; 9
-    [xx] =&gt; 12
-    [4] =&gt; 15
+    [0] => 3
+    [1] => 6
+    [2] => 9
+    [xx] => 12
+    [4] => 15
 )
 */
 
 function a($n, $m)
 {
-    return &quot;{$n} and {$m}&quot;;
+    return "{$n} and {$m}";
 }
 
 function b($n, $m)
 {
-    return [$n =&gt; $m];
+    return [$n => $m];
 }
 
-$a = [1, &quot;test&quot; =&gt; 2,];
+$a = [1, "test" => 2,];
 $b = [&#039;aa&#039;, &#039;bb&#039;,];
 
 $c = array_map(&#039;a&#039;, $a, $b);
@@ -127,19 +127,19 @@ print_r($d);
 /*
 Array
 (
-    [0] =&gt; 1 and aa
-    [1] =&gt; 2 and bb
+    [0] => 1 and aa
+    [1] => 2 and bb
 )
 Array
 (
-    [0] =&gt; Array
+    [0] => Array
         (
-            [1] =&gt; aa
+            [1] => aa
         )
 
-    [1] =&gt; Array
+    [1] => Array
         (
-            [2] =&gt; bb
+            [2] => bb
         )
 
 )

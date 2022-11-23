@@ -7,8 +7,8 @@ array_search ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : mix
 3. 第三个参数是 true 代表全等才算匹配成功，默认是 false，表示只要相等，不管类型是否一样就是匹配成功。
 
 ```php
-&lt;?php
-$array = [0 =&gt; &#039;blue&#039;, 1 =&gt; &#039;red&#039;, 2 =&gt; &#039;green&#039;, 3 =&gt; &#039;red&#039;];
+<?php
+$array = [0 => &#039;blue&#039;, 1 => &#039;red&#039;, 2 => &#039;green&#039;, 3 => &#039;red&#039;];
 
 $key1 = array_search(&#039;green&#039;, $array);
 $key2 = array_search(&#039;red&#039;, $array);

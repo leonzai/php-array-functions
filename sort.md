@@ -1,5 +1,5 @@
 ```php
-sort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] ) : bool
+sort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool
 
 // 如果比较的两个元素相等，那么他们俩的顺序是不可预测的。
 // 该函数返回值是 true 表示排序成功，false 表示排序失败。
@@ -15,13 +15,13 @@ sort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] ) : bool
 | **`SORT_FLAG_CASE`**         | `SORT_FLAG_CASE`主要配合 `SORT_STRING` 和 `SORT_NATURAL`对`字符`处理时是否忽略大小写 |
 
 ```php
-&lt;?php
+<?php
 // 错误示例：当没有指定排序的时候一定要是同一类型， 不是同一类型会出现问题
-$fruits = array(&quot;a&quot;, &quot;b&quot;, &quot;heiheihei&quot; =&gt; &quot;A&quot;, &quot;1&quot;, 1, 2, &quot;2&quot;);
+$fruits = array("a", "b", "heiheihei" => "A", "1", 1, 2, "2");
 sort($fruits);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;$key -- $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "$key -- $val\n";
 }
 
 /*
@@ -35,11 +35,11 @@ foreach ($fruits as $key =&gt; $val) {
 */
 
 // 全是字符串：字符串型数字最先，大写中间，小写最后
-$fruits = array(&quot;ac&quot;, &quot;aC&quot;, &quot;b&quot;, &quot;heiheihei&quot; =&gt; &quot;A&quot;, &quot;101&quot;, &quot;-101&quot;, &quot;2&quot;, &quot;1.2&quot;, &quot;2.2&quot;, &quot;ab&quot;);
+$fruits = array("ac", "aC", "b", "heiheihei" => "A", "101", "-101", "2", "1.2", "2.2", "ab");
 sort($fruits);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;$key -- $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "$key -- $val\n";
 }
 
 /*
@@ -57,13 +57,13 @@ foreach ($fruits as $key =&gt; $val) {
 ```
 
 ```php
-&lt;?php
+<?php
 $fruits = array(&#039;1c&#039;, &#039;a1&#039;, &#039;11b&#039;);
 sort($fruits, SORT_NUMERIC);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;转化成数字：&quot; . (int)$val . &#039;----&#039;;
-    echo &quot; $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "转化成数字：" . (int)$val . &#039;----&#039;;
+    echo " $val\n";
 }
 
 /*
@@ -74,12 +74,12 @@ foreach ($fruits as $key =&gt; $val) {
 ```
 
 ```php
-&lt;?php
+<?php
 $fruits = array(2, 15, 5, 3, &#039;a&#039;, &#039;A&#039;);
 sort($fruits, SORT_STRING);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;$key -- $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "$key -- $val\n";
 }
 
 /*
@@ -93,12 +93,12 @@ foreach ($fruits as $key =&gt; $val) {
 ```
 
 ```php
-&lt;?php
+<?php
 $fruits = array(&#039;a1&#039;, &#039;a12&#039;, &#039;c1&#039;, &#039;c12&#039;, &#039;c2&#039;, &#039;c10&#039;);
 sort($fruits, SORT_NATURAL);
 
-foreach ($fruits as $key =&gt; $val) {
-    echo &quot;$key -- $val\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo "$key -- $val\n";
 }
 
 /*
@@ -112,13 +112,13 @@ foreach ($fruits as $key =&gt; $val) {
 ```
 
 ```php
-&lt;?php
+<?php
 $fruits = array(
-    &quot;Orange1&quot;, &quot;orange2&quot;, &quot;Orange3&quot;, &quot;orange20&quot;
+    "Orange1", "orange2", "Orange3", "orange20"
 );
 sort($fruits, SORT_NATURAL | SORT_FLAG_CASE);
-foreach ($fruits as $key =&gt; $val) {
-    echo $val . &quot;\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo $val . "\n";
 }
 
 /*
@@ -129,8 +129,8 @@ orange20
 */
 
 sort($fruits, SORT_NATURAL);
-foreach ($fruits as $key =&gt; $val) {
-    echo $val . &quot;\n&quot;;
+foreach ($fruits as $key => $val) {
+    echo $val . "\n";
 }
 
 /*

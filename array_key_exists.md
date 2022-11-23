@@ -6,10 +6,10 @@ array_key_exists ( mixed $key , array $array ) : bool
 2. 与 isset 区别：如果元素的值是 null，isset 返回 false，key_exists 返回 true。
 
 ```php
-&lt;?php
+<?php
 $arr = [
-    &#039;first&#039; =&gt; 1,
-    &#039;second&#039; =&gt; null
+    &#039;first&#039; => 1,
+    &#039;second&#039; => null
 ];
 
 var_dump(array_key_exists(&#039;first&#039;, $arr));

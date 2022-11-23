@@ -10,8 +10,8 @@ array_unique ( array $array [, int $sort_flags = SORT_STRING ] ) : array
 6. php 7.2 之前，返回的数组里的数字索引将被重新索引，字符串索引不变，参考下面例子。
 
 ```php
-&lt;?php
-$input = [&quot;a&quot; =&gt; &quot;green&quot;, &quot;red&quot;, &quot;b&quot; =&gt; &quot;green&quot;, &quot;red&quot;, &quot;blue&quot;,];
+<?php
+$input = ["a" => "green", "red", "b" => "green", "red", "blue",];
 
 $result = array_unique($input);
 print_r($result);
@@ -23,17 +23,17 @@ var_dump($result);
 // php 7.2 开始
 Array
 (
-    [a] =&gt; green
-    [0] =&gt; red
-    [2] =&gt; blue
+    [a] => green
+    [0] => red
+    [2] => blue
 )
 array(3) {
-  [&quot;b&quot;]=&gt;
-  string(5) &quot;green&quot;
-  [1]=&gt;
-  string(3) &quot;red&quot;
-  [2]=&gt;
-  string(4) &quot;blue&quot;
+  ["b"]=>
+  string(5) "green"
+  [1]=>
+  string(3) "red"
+  [2]=>
+  string(4) "blue"
 }
 */
 
@@ -41,33 +41,33 @@ array(3) {
 // php 7.2 之前
 Array
 (
-    [a] =&gt; green
-    [0] =&gt; red
-    [1] =&gt; blue
+    [a] => green
+    [0] => red
+    [1] => blue
 )
 array(3) {
-  [&quot;b&quot;]=&gt;
-  string(5) &quot;green&quot;
-  [2]=&gt;
-  string(3) &quot;red&quot;
-  [1]=&gt;
-  string(4) &quot;blue&quot;
+  ["b"]=>
+  string(5) "green"
+  [2]=>
+  string(3) "red"
+  [1]=>
+  string(4) "blue"
 }
 */
 ```
 
 ```php
-&lt;?php
-$input = [4, &quot;4&quot;, &quot;3&quot;, 4, 3, &quot;3&quot;];
+<?php
+$input = [4, "4", "3", 4, 3, "3"];
 $result = array_unique($input);
 var_dump($result);
 
 /*
 array(2) {
-  [0]=&gt;
+  [0]=>
   int(4)
-  [2]=&gt;
-  string(1) &quot;3&quot;
+  [2]=>
+  string(1) "3"
 }
 */
 ```

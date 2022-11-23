@@ -6,17 +6,17 @@ array_change_key_case ( array $array [, int $case] ) : array
 ```
 
 ```php
-&lt;?php
+<?php
     
-$array = [&quot;FirSt&quot; =&gt; 1, &quot;SecOnd&quot; =&gt; 4];
+$array = ["FirSt" => 1, "SecOnd" => 4];
 $result = array_change_key_case($array, CASE_UPPER);
 var_dump($result);
 
 /*
 array(2) {
-  [&quot;FIRST&quot;]=&gt;
+  ["FIRST"]=>
   int(1)
-  [&quot;SECOND&quot;]=&gt;
+  ["SECOND"]=>
   int(4)
 }
 */

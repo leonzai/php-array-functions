@@ -1,5 +1,5 @@
 ```php
-array_walk ( array &amp;$array , callable $callback [, mixed $userdata = NULL ] ) : bool
+array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ] ) : bool
 ```
 
 1. 第一个参数是要被处理的数组
@@ -9,31 +9,31 @@ array_walk ( array &amp;$array , callable $callback [, mixed $userdata = NULL ] 
 5. 该函数只能用来修改数组元素的值，不应该用来修改数组的结构或者元素的键等等。
 
 ```php
-&lt;?php
+<?php
 $arr = [
-    &quot;name1&quot; =&gt; &#039;栗深.com&#039;,
-    &quot;name2&quot; =&gt; &#039;lishengroup.com&#039;,
-    &quot;name3&quot; =&gt; &#039;qianjinyike.com&#039;,
+    "name1" => &#039;栗深.com&#039;,
+    "name2" => &#039;lishengroup.com&#039;,
+    "name3" => &#039;qianjinyike.com&#039;,
 ];
 
 /** foreach 方式 */
-foreach ($arr as $key =&gt; $value) {
+foreach ($arr as $key => $value) {
     $newKey = substr($key, 4);
-    echo &quot;$newKey: $value\n&quot;;
+    echo "$newKey: $value\n";
 }
 
 /** array_walk 方式 */
 array_walk($arr, function ($value, $key) {
     $newKey = substr($key, 4);
-    echo &quot;$newKey: $value\n&quot;;
+    echo "$newKey: $value\n";
 });
 ```
 
 ```php
-&lt;?php
+<?php
 $arr = [
-    &quot;name2&quot; =&gt; [&#039;lishengroup.com&#039;, &#039;栗深&#039;],
-    &quot;name3&quot; =&gt; &#039;qianjinyike.com&#039;,
+    "name2" => [&#039;lishengroup.com&#039;, &#039;栗深&#039;],
+    "name3" => &#039;qianjinyike.com&#039;,
 ];
 
 array_walk($arr, function ($value) {
@@ -42,12 +42,12 @@ array_walk($arr, function ($value) {
 
 /*
 array(2) {
-  [0]=&gt;
-  string(15) &quot;lishengroup.com&quot;
-  [1]=&gt;
-  string(6) &quot;栗深&quot;
+  [0]=>
+  string(15) "lishengroup.com"
+  [1]=>
+  string(6) "栗深"
 }
-string(15) &quot;qianjinyike.com&quot;
+string(15) "qianjinyike.com"
 */
 
 array_walk_recursive($arr, function ($value) {
@@ -55,9 +55,9 @@ array_walk_recursive($arr, function ($value) {
 });
 
 /*
-string(15) &quot;lishengroup.com&quot;
-string(6) &quot;栗深&quot;
-string(15) &quot;qianjinyike.com&quot;
+string(15) "lishengroup.com"
+string(6) "栗深"
+string(15) "qianjinyike.com"
 */
 ```
 
