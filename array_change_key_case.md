@@ -8,15 +8,15 @@ array_change_key_case ( array $array [, int $case] ) : array
 ```php
 <?php
     
-$array = ["FirSt" =&gt; 1, "SecOnd" =&gt; 4];
+$array = ["FirSt" > 1, "SecOnd" > 4];
 $result = array_change_key_case($array, CASE_UPPER);
 var_dump($result);
 
 /*
 array(2) {
-  ["FIRST"]=&gt;
+  ["FIRST"]>
   int(1)
-  ["SECOND"]=&gt;
+  ["SECOND"]>
   int(4)
 }
 */
