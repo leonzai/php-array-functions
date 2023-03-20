@@ -17,7 +17,6 @@ Array
         (
             [color] => gold
         )
-
 )
 */
 ```
