@@ -1,5 +1,5 @@
 ```php
-// array_intersect_uassoc ( array $array1 , array $array2 [, array $... ], callable $key_compare_func ) : array
+array_intersect_uassoc ( array $array1 , array $array2 [, array $... ], callable $key_compare_func ) : array
 ```
 
 内部原理：
