@@ -14,7 +14,7 @@ var_dump($fruit);
 var_dump($stack);
 
 /*
-int(4)
+int(4)         之所以是 4 ，是因为根本就没有 push 东西进去
 array(4) {
   [0]=>
   string(1) "a"
@@ -24,46 +24,6 @@ array(4) {
   string(1) "c"
   [3]=>
   string(1) "d"
-}
-*/
-
-$fruit = array_push($stack, 123);
-var_dump($stack);
-
-/*
-array(5) {
-  [0]=>
-  string(1) "a"
-  [1]=>
-  string(1) "b"
-  [2]=>
-  string(1) "c"
-  [3]=>
-  string(1) "d"
-  [4]=>
-  int(123)
-}
-*/
-
-$fruit = array_push($stack, 456, 789);
-var_dump($stack);
-
-/*
-array(7) {
-  [0]=>
-  string(1) "a"
-  [1]=>
-  string(1) "b"
-  [2]=>
-  string(1) "c"
-  [3]=>
-  string(1) "d"
-  [4]=>
-  int(123)
-  [5]=>
-  int(456)
-  [6]=>
-  int(789)
 }
 */
 ```
